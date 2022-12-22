@@ -6,6 +6,7 @@ specifiers:
   '@vue/babel-helper-vue-transform-on': ^1.0.2
   autoprefixer: ^10.4.13
   daisyui: ^2.43.2
+  marked: ^4.2.4
   pinia: ^2.0.28
   postcss: ^8.4.20
   tailwindcss: ^3.2.4
@@ -17,6 +18,7 @@ specifiers:
 
 dependencies:
   daisyui: 2.43.2_r4gnkvssmvyxmi2wmat5xbx36a
+  marked: registry.npmmirror.com/marked/4.2.4
   pinia: 2.0.28_prq2uz4lho2pwp6irk4cfkrxwu
   vue: registry.npmmirror.com/vue/3.2.45
   vue-router: 4.1.6_vue@3.2.45
@@ -1580,6 +1582,14 @@ packages:
     version: 0.25.9
     dependencies:
       sourcemap-codec: registry.npmmirror.com/sourcemap-codec/1.4.8
+
+  registry.npmmirror.com/marked/4.2.4:
+    resolution: {integrity: sha512-Wcc9ikX7Q5E4BYDPvh1C6QNSxrjC9tBgz+A/vAhp59KXUgachw++uMvMKiSW8oA85nopmPZcEvBoex/YLMsiyA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/marked/-/marked-4.2.4.tgz}
+    name: marked
+    version: 4.2.4
+    engines: {node: '>= 12'}
+    hasBin: true
+    dev: false
 
   registry.npmmirror.com/minimatch/5.1.1:
     resolution: {integrity: sha512-362NP+zlprccbEt/SkxKfRMHnNY85V74mVnpUpNyr3F35covl09Kec7/sEFLt3RA4oXmewtoaanoIf67SE5Y5g==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/minimatch/-/minimatch-5.1.1.tgz}

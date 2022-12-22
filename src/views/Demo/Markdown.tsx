@@ -1,4 +1,4 @@
-import { watch, defineComponent, ref } from "vue";
+import { watch, defineComponent, ref, nextTick } from "vue";
 import { marked } from 'marked';
 import { useDebounceFn } from "@vueuse/core";
 
@@ -13,12 +13,12 @@ export default defineComponent({
     const editor = ref<HTMLTextAreaElement>();
     const preview = ref<HTMLElement>();
 
-    watch(
-      () => editor.value?.value,
-      (value) => {
-        console.log(value);
-      }
-    );
+    nextTick(() => {
+      editor.value!.addEventListener("input", () => {
+        const value = editor.value!.value;
+        preview.value!.innerHTML = marked(value);
+      });
+    });
 
 
 

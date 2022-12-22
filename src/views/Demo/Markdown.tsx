@@ -14,11 +14,14 @@ export default defineComponent({
     const preview = ref<HTMLElement>();
 
     nextTick(() => {
-      editor.value!.addEventListener("input", () => {
-        const value = editor.value!.value;
-        preview.value!.innerHTML = marked(value);
-      });
+      editor.value!.addEventListener("input", useDebounceFn((e) => {
+        console.log(e);
+
+        preview.value!.innerHTML = marked(editor.value!.value);
+      }, 500));
     });
+
+
 
 
 

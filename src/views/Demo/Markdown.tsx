@@ -2,6 +2,8 @@ import { computed, defineComponent, ref } from "vue";
 import { marked } from 'marked';
 import { useDebounceFn } from "@vueuse/core";
 
+import s from "./markdown.module.css";
+
 export default defineComponent({
   name: "markdown",
   meta: {
@@ -33,7 +35,7 @@ export default defineComponent({
             }
           } ></textarea>
         </div>
-        <div class="preview" ref={preview}></div>
+        <div class={s.preview} ref={preview}></div>
       </div >
     );
   }

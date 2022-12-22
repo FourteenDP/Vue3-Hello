@@ -17,8 +17,13 @@ export default defineComponent({
     return () => (
       <div class="markdown">
         <div class="editor">
-          <textarea value={text.value} onInput={(e) => {
+          <textarea onInput={(e) => {
+            if (!e.target) return;
+            if (!e.target.value) return;
             text.value = e.target.value;
+            if (preview.value) {
+              preview.value.innerHTML = res.value;
+            }
           }}></textarea>
         </div>
         <div class="preview" ref={preview}>{text.value}</div>

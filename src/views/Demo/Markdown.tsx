@@ -13,9 +13,9 @@ export default defineComponent({
     const editor = ref<HTMLTextAreaElement>();
     const preview = ref<HTMLElement>();
 
-    console.log(editor, preview);
-
-
+    editor.value?.addEventListener("input", useDebounceFn(() => {
+      preview.value!.innerHTML = marked(editor.value!.value);
+    }, 500));
 
     return () => (
       <div class="markdown">

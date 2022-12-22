@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/marked': ^4.0.8
   '@vitejs/plugin-vue': ^4.0.0
   '@vitejs/plugin-vue-jsx': ^3.0.0
   '@vue/babel-helper-vue-transform-on': ^1.0.2
@@ -24,6 +25,7 @@ dependencies:
   vue-router: 4.1.6_vue@3.2.45
 
 devDependencies:
+  '@types/marked': registry.npmmirror.com/@types/marked/4.0.8
   '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/4.0.0_vite@4.0.0+vue@3.2.45
   '@vitejs/plugin-vue-jsx': 3.0.0_vite@4.0.0+vue@3.2.45
   '@vue/babel-helper-vue-transform-on': registry.npmmirror.com/@vue/babel-helper-vue-transform-on/1.0.2
@@ -1310,6 +1312,12 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  registry.npmmirror.com/@types/marked/4.0.8:
+    resolution: {integrity: sha512-HVNzMT5QlWCOdeuBsgXP8EZzKUf0+AXzN+sLmjvaB3ZlLqO+e4u0uXrdw9ub69wBKFs+c6/pA4r9sy6cCDvImw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/marked/-/marked-4.0.8.tgz}
+    name: '@types/marked'
+    version: 4.0.8
+    dev: true
 
   registry.npmmirror.com/@vitejs/plugin-vue/4.0.0_vite@4.0.0+vue@3.2.45:
     resolution: {integrity: sha512-e0X4jErIxAB5oLtDqbHvHpJe/uWNkdpYV83AOG2xo2tEVSzCzewgJMtREZM30wXnM5ls90hxiOtAuVU6H5JgbA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vitejs/plugin-vue/-/plugin-vue-4.0.0.tgz}

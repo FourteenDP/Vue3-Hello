@@ -15,15 +15,16 @@ export default defineComponent({
     });
 
     const update = useDebounceFn((e) => {
-      console.log(e);
-
+      const target = e as HTMLTextAreaElement;
     }, 1000)
 
 
     return () => (
       <div class="markdown">
         <div class="editor">
-          <textarea value={text.value} onInput={update}></textarea>
+          <textarea value={text.value} onInput={(e) => {
+            update(e.target);
+          }} ></textarea>
         </div>
         <div class="preview" ref={preview}></div>
       </div>

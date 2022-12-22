@@ -15,15 +15,10 @@ export default defineComponent({
 
     nextTick(() => {
       editor.value!.addEventListener("input", useDebounceFn((e) => {
-        console.log(e);
-
-        preview.value!.innerHTML = marked(editor.value!.value);
+        const target = e.target as HTMLTextAreaElement;
+        preview.value!.innerHTML = marked(target.value);
       }, 500));
     });
-
-
-
-
 
     return () => (
       <div class="markdown">

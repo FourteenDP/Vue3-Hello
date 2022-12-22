@@ -2,15 +2,15 @@ import { defineComponent } from "vue"
 import { RouterView } from "vue-router"
 
 export default defineComponent({
-  name: 'Base',
+  name: 'Demo',
   meta: {
-    title: '基础',
+    title: '示例',
     showMenu: true,
-    icon: '🏠',
+    icon: '🔥'
   },
   setup() {
     return () => (
-      <div class="home">
+      <div class="Demo">
         <RouterView></RouterView>
       </div>
     )

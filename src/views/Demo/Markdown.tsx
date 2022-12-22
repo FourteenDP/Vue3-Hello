@@ -1,6 +1,6 @@
 import { computed, defineComponent, ref } from "vue";
 import { marked } from 'marked';
-import { useDebounce } from "@vueuse/core";
+import { useDebounceFn } from "@vueuse/core";
 
 export default defineComponent({
   name: "markdown",
@@ -14,7 +14,8 @@ export default defineComponent({
       return marked(text.value);
     });
 
-    const update = useDebounce(() => {
+    const update = useDebounceFn((e) => {
+      console.log(e);
 
     }, 1000)
 
@@ -22,7 +23,7 @@ export default defineComponent({
     return () => (
       <div class="markdown">
         <div class="editor">
-          <textarea value={text.value}></textarea>
+          <textarea value={text.value} onInput={update}></textarea>
         </div>
         <div class="preview" ref={preview}></div>
       </div>

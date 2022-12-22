@@ -1,0 +1,41 @@
+.preview h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+}
+
+.preview h2 {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+}
+
+.preview h3 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+}
+
+.preview h4 {
+    font-size: 0.75em;
+    font-weight: bold;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+}
+
+.preview h5 {
+    font-size: 0.5em;
+    font-weight: bold;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+}
+
+.preview h6 {
+    font-size: 0.25em;
+    font-weight: bold;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+}

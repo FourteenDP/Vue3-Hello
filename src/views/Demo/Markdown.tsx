@@ -14,20 +14,25 @@ export default defineComponent({
       return marked(text.value);
     });
 
-    const update = useDebounceFn((e) => {
-      const target = e as HTMLTextAreaElement;
-    }, 1000)
+    const update = useDebounceFn(() => {
+      if (preview.value) {
+        preview.value.innerHTML = res.value;
+      }
+    }, 1000);
 
 
     return () => (
       <div class="markdown">
         <div class="editor">
-          <textarea value={text.value} onInput={(e) => {
-            update(e.target);
-          }} ></textarea>
+          <textarea value={text.value} onInput={
+            ({ target }) => {
+              text.value = (target as HTMLTextAreaElement).value;
+              update();
+            }
+          } ></textarea>
         </div>
         <div class="preview" ref={preview}></div>
-      </div>
+      </div >
     );
   }
 });

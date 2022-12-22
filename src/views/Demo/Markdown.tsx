@@ -9,12 +9,14 @@ export default defineComponent({
   },
   setup() {
     const text = ref("# Hello World");
-    const preview = ref<HTMLElement | null>(null);
+    const preview = ref<HTMLElement>();
     const res = computed(() => {
       return marked(text.value);
     });
 
     const update = useDebounceFn(() => {
+      console.log(res.value);
+
       if (preview.value) {
         preview.value.innerHTML = res.value;
       }

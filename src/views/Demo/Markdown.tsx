@@ -8,7 +8,9 @@ export default defineComponent({
   },
   setup() {
     const text = ref("# Hello World");
-    const preview = ref
+    const preview = ref<HTMLElement>();
+    console.log(preview);
+
     return () => (
       <div>
         <div class="markdown">
@@ -16,7 +18,7 @@ export default defineComponent({
             <textarea value={text.value} class="markdown-textarea" placeholder="请输入markdown文本"></textarea>
           </div>
           <div class="markdown-preview">
-            <div ref="preview" class="markdown-preview-content"></div>
+            <div ref={preview} class="markdown-preview-content"></div>
           </div>
         </div>
       </div>

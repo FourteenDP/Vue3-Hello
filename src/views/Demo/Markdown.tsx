@@ -13,17 +13,16 @@ export default defineComponent({
       return marked(text.value);
     });
 
+    const update = debounce((e) => {
+      const target = e.target as HTMLTextAreaElement;
+      text.value = e.target.value
+    }, 100)
+
 
     return () => (
       <div class="markdown">
         <div class="editor">
-          <textarea onInput={(e) => {
-            const target = e.target as HTMLTextAreaElement;
-            text.value = target.value;
-            if (preview.value) {
-              preview.value.innerHTML = res.value;
-            }
-          }}></textarea>
+          <textarea value={text.value} onInput={update}></textarea>
         </div>
         <div class="preview" ref={preview}></div>
       </div>

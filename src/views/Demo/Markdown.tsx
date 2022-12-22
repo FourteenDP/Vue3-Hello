@@ -1,4 +1,4 @@
-import { computed, defineComponent, ref } from "vue";
+import { watch, defineComponent, ref } from "vue";
 import { marked } from 'marked';
 import { useDebounceFn } from "@vueuse/core";
 
@@ -13,9 +13,14 @@ export default defineComponent({
     const editor = ref<HTMLTextAreaElement>();
     const preview = ref<HTMLElement>();
 
-    editor.value?.addEventListener("input", useDebounceFn(() => {
-      preview.value!.innerHTML = marked(editor.value!.value);
-    }, 500));
+    watch(
+      () => editor.value?.value,
+      (value) => {
+        console.log(value);
+      }
+    );
+
+
 
     return () => (
       <div class="markdown">

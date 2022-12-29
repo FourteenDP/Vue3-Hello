@@ -1,4 +1,4 @@
-import { watch, defineComponent, ref, nextTick } from "vue";
+import { defineComponent, ref, nextTick } from "vue";
 import { marked } from 'marked';
 import { useDebounceFn } from "@vueuse/core";
 

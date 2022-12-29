@@ -12,7 +12,7 @@ interface Module {
 
 
 const addRoutes = Object.keys(modules).map(async (key) => {
-  const path = key.replace('../views', '').replace('.tsx', '')
+  const path = key.replace('../views', '').replace('.tsx', '').replace('.vue', '')
   const name = path.replace('/', '')
   const component = modules[key]
   const meta = (await component() as Module).default.meta

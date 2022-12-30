@@ -3,6 +3,9 @@
 import 'vue-router'
 import 'vue'
 
+
+
+
 declare module 'vue-router' {
   interface RouteMeta {
     title?: string
@@ -12,4 +15,9 @@ declare module 'vue-router' {
 }
 
 declare module 'vue' {
+
+  interface HTMLAttributes {
+    vModel?: string
+    vShow?: boolean
+  }
 }
